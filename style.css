@@ -1,0 +1,41 @@
+body {
+  background-color: aqua;
+  font-size: 40px;
+  text-indent: 60px;
+}
+.cards {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  margin-top: 200px;
+
+  justify-content: center;
+}
+
+.primero a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.segundo a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.tercero a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.cuarto a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
