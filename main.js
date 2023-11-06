@@ -17,7 +17,7 @@ alert(
 alert("Entre ellas:");
 const HABITACIONES = parseInt(
   prompt(
-    "(1) Vin Disel, (2) La Mirta Legrand, (3) La Gran Roviralta, (4) It's Me Mariouuu (Para salir, escriba SALIR)"
+    "(1) Vin Disel, (2) La Mirta Legrand, (3) La Gran Roviralta, (4) It's Me Mariouuu "
   )
 );
 
@@ -45,14 +45,14 @@ if (HABITACIONES === 1) {
   alert("no Elegiste ninguna vuelva prontos");
 }
 
-function preguntarDescuento() {
+function desuento() {
   let respuesta = prompt(
-    "¿Quieres acceder al descuento quedándote a pernoctar? (responde si o no)"
+    "¿Queeres acceder al descuento quedándote a pernoctar y te clavas tambien un desayuno? (responde si o no)"
   );
 
   while (respuesta !== "si" && respuesta !== "no") {
     respuesta = prompt(
-      "Por favor, responde si o no: ¿quieres acceder al descuento del 20% rufian?"
+      "Por favor, responde si o no: ¿queres acceder al descuento del 20% rufian?"
     );
   }
 
@@ -76,5 +76,5 @@ function preguntarDescuento() {
   }
 }
 
-preguntarDescuento();
+desuento();
 alert("gracias por ponerla en Hotel Faraon hasta el proximo fuki fuki");
