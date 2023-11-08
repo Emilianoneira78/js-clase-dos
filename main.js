@@ -42,7 +42,7 @@ if (HABITACIONES === 1) {
       mario
   );
 } else {
-  alert("no Elegiste ninguna vuelva prontos");
+  alert("no Elegiste ninguna Vuelva prontosss");
 }
 
 function desuento() {
@@ -77,4 +77,6 @@ function desuento() {
 }
 
 desuento();
-alert("gracias por ponerla en Hotel Faraon hasta el proximo fuki fuki");
+alert(
+  "Gracias por ponerla en Hotel Faraon hasta el proximo fuki fuki y chucu chucu chucu chucu"
+);

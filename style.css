@@ -17,21 +17,7 @@ body {
   text-decoration: none;
   color: white;
 }
-.segundo a {
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
-.tercero a {
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
-.cuarto a {
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
+
 h1 {
   color: white;
   display: flex;
