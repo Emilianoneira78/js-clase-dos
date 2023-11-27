@@ -377,3 +377,4 @@ const habitacionesFiltradas = habitaciones.filter(
 
 console.log(`Habitaciones con un costo menor a ${costoMaximo}:`);
 console.log(habitacionesFiltradas);
+alert("gracias");
