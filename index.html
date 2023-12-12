@@ -3,22 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <script src="./main.js"></script>
 
-    <main>
-      <div>
-        <h5>Emiliano clase JS</h5>
+    <div class="titulo">
+      <h1>Bienvenido al Hotel El Faraón</h1>
+    </div>
+
+    <div class="tituloHab">
+      <h2>Habitaciones Disponibles</h2>
+      <div class="habDisp">
+        <h3>La Vin Diesel</h3>
+        <h3>La Mirta Legrand</h3>
+        <h3>La Gran Roviralta</h3>
+        <h3>It's Me Mariouuu</h3>
       </div>
-      <h1>EJERCICIOS JS</h1>
-      <div class="cards">
-        <div class="primero">
-          <a href="#">1</a>
-        </div>
-      </div>
-    </main>
+    </div>
+
+    <h2>Reserve su habitacion</h2>
+    <button onclick="agregarHabitacion()">Elija su Habitacion</button>
+
+    <h2>Reserva</h2>
+    <table>
+      <tr>
+        <th>Habitación</th>
+        <th>Costo</th>
+        <th>Eliminar</th>
+      </tr>
+      <tr id="habitaciones-carrito"></tr>
+      <tr>
+        <td colspan="2" id="total-carrito"></td>
+        <td><button onclick="finalizarCompra()">Finalizar compra</button></td>
+      </tr>
+    </table>
+
+    <script src="app.js"></script>
   </body>
 </html>
