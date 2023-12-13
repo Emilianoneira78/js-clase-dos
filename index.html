@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <script src="./main.js"></script>
 
@@ -22,23 +23,29 @@
         <h3>It's Me Mariouuu</h3>
       </div>
     </div>
-
-    <h2>Reserve su habitacion</h2>
-    <button onclick="agregarHabitacion()">Elija su Habitacion</button>
-
+    <div class="tituloReserva">
+      <h2>Reserve su habitacion</h2>
+    </div>
+    <div class="botonesReserva">
+      <button onclick="agregarHabitacion(0)">
+        Elija Habitacion La Vin Diesel
+      </button>
+      <button onclick="agregarHabitacion(1)">
+        Elija Habitacion La Mirta Legrand
+      </button>
+      <button onclick="agregarHabitacion(2)">
+        Elija Habitacion La Gran Roviralta
+      </button>
+      <button onclick="agregarHabitacion(3)">
+        Elija Habitacion It's Me Mariouuu
+      </button>
+    </div>
     <h2>Reserva</h2>
-    <table>
-      <tr>
-        <th>Habitación</th>
-        <th>Costo</th>
-        <th>Eliminar</th>
-      </tr>
-      <tr id="habitaciones-carrito"></tr>
-      <tr>
-        <td colspan="2" id="total-carrito"></td>
-        <td><button onclick="finalizarCompra()">Finalizar compra</button></td>
-      </tr>
-    </table>
+    <div id="habitaciones-carrito"></div>
+
+    <div id="total-carrito"></div>
+
+    <button onclick="finalizarCompra()">Finalizar compra</button>
 
     <script src="app.js"></script>
   </body>

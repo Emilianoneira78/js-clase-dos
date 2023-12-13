@@ -1,5 +1,20 @@
+body {
+  background-color: aqua;
+}
+
 .titulo {
   color: white;
   background-color: skyblue;
   text-align: center;
+}
+.tituloReserva {
+  color: white;
+  font-size: 24px;
+  font-style: normal;
+}
+.botonesReserva {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  row-gap: 10px;
 }
