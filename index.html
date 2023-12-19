@@ -8,38 +8,18 @@
   </head>
 
   <body>
-    <script src="./main.js"></script>
-
     <div class="titulo">
       <h1>Bienvenido al Hotel El Faraón</h1>
     </div>
 
     <div class="tituloHab">
       <h2>Habitaciones Disponibles</h2>
-      <div class="habDisp">
-        <h3>La Vin Diesel</h3>
-        <h3>La Mirta Legrand</h3>
-        <h3>La Gran Roviralta</h3>
-        <h3>It's Me Mariouuu</h3>
-      </div>
+      <div class="habDisp" id="habitaciones-disponibles"></div>
     </div>
     <div class="tituloReserva">
       <h2>Reserve su habitacion</h2>
     </div>
-    <div class="botonesReserva">
-      <button onclick="agregarHabitacion(0)">
-        Elija Habitacion La Vin Diesel
-      </button>
-      <button onclick="agregarHabitacion(1)">
-        Elija Habitacion La Mirta Legrand
-      </button>
-      <button onclick="agregarHabitacion(2)">
-        Elija Habitacion La Gran Roviralta
-      </button>
-      <button onclick="agregarHabitacion(3)">
-        Elija Habitacion It's Me Mariouuu
-      </button>
-    </div>
+    <div class="botonesReserva" id="botones-reserva"></div>
     <h2>Reserva</h2>
     <div id="habitaciones-carrito"></div>
 
@@ -47,6 +27,7 @@
 
     <button onclick="finalizarCompra()">Finalizar compra</button>
 
-    <script src="app.js"></script>
+    <script src="./main.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
