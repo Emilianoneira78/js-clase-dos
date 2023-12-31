@@ -1,3 +1,3 @@
-Espero este bien el trabajo, me tuve que ayudar de varios lados hay cosas que son
-complicadas todavia de entender bien. espero llegar bien a la entrega Final y terminar de comprender todo.
+Espero este todo bien, gracias por el maravilloso curso aprendi un monton mas de lo que imaginaba
+espero su correccion para ver si tengo que hacer modificaciones.
 muchas Gracias

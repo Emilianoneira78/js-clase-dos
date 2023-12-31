@@ -23,15 +23,35 @@ habitaciones.forEach((habitacion) => {
   const botonReserva = document.createElement("button");
   botonReserva.innerText = `Reservar ${habitacion.nombre}`;
   botonReserva.addEventListener("click", () => {
-    agregarAlCarrito(habitacion);
+    Swal.fire({
+      title: "¿Está seguro de reservar esta habitación?",
+      text: `Habitación: ${habitacion.nombre} - Precio: $${habitacion.costo}`,
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Sí, reservar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        agregarAlCarrito(habitacion);
+        Swal.fire(
+          "¡Reservado!",
+          "La habitación se ha reservado con éxito.",
+          "success"
+        );
+      }
+    });
   });
   botonesReservaElement.appendChild(botonReserva);
 });
 
 function agregarAlCarrito(habitacion) {
   carrito.push(habitacion);
+  actualizarCarritoYLocalStorage();
+}
+
+function actualizarCarritoYLocalStorage() {
   mostrarCarrito();
-  actualizarLocalStorage();
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 function mostrarCarrito() {
@@ -53,30 +73,37 @@ function mostrarCarrito() {
 
 function eliminarDelCarrito(index) {
   carrito.splice(index, 1);
-  mostrarCarrito();
-  actualizarLocalStorage();
-}
-
-function actualizarLocalStorage() {
-  localStorage.setItem("carrito", JSON.stringify(carrito));
+  actualizarCarritoYLocalStorage();
 }
 
 function finalizarCompra() {
   if (carrito.length > 0) {
     let total = carrito.reduce((acc, habitacion) => acc + habitacion.costo, 0);
-    alert(
-      `¡Gracias por su compra! Su reserva ha sido realizada con éxito. Total: $${total}`
-    );
-    carrito = [];
-    mostrarCarrito();
-    actualizarLocalStorage();
+    Swal.fire({
+      title: "¿Finalizar Reserva?",
+      text: `Total: $${total}`,
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Sí, finalizar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        realizarPago(total);
+        carrito = [];
+        actualizarCarritoYLocalStorage();
+      }
+    });
   } else {
-    alert(
-      "No hay habitaciones en el carrito. Por favor, seleccione al menos una habitación para realizar la compra."
-    );
+    Swal.fire("Error", "El carrito está vacío", "error");
   }
 }
 
-window.onload = function () {
-  mostrarCarrito();
-};
+function realizarPago(total) {
+  Swal.fire(
+    "¡Reserva Finalizada!",
+    `Se ha realizado el pago por un total de $${total}`,
+    "success"
+  );
+}
+
+mostrarCarrito();
