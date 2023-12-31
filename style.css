@@ -1,11 +1,13 @@
 body {
   background-color: aqua;
+  margin-left: 0.625rem;
 }
 
 .titulo {
   color: white;
   background-color: skyblue;
   text-align: center;
+  margin: 100px;
 }
 .tituloReserva {
   color: white;
